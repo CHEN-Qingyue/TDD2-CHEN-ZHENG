@@ -15,6 +15,13 @@ class Test(unittest.TestCase):
         self.assertEqual(tdd2.derivee([5.029,2.498,1.409,1.409,2.409,5.209],0.5),[-5.06,-2.18,0.0,2.0,5.6])
         self.assertEqual(tdd2.derivee([2.575,2.575,2.575,2.575],1),[0,0,0])
         self.assertEqual(tdd2.derivee([1],2),-1)
+        
+    
+    def test_derivee2(self):
+        self.assertEqual(tdd2.derivee2([-2.979,-1.056,0.76,2.298,4.987],2),[-0.02,-0.07,0.29])
+        self.assertEqual(tdd2.derivee2([5.029,2.498,1.409,1.409,2.409,5.209],0.5),[5.76,4.36,4.0,7.2])
+        self.assertEqual(tdd2.derivee2([2.575,2.575,2.575,2.575],1),[0,0])
+        self.assertEqual(tdd2.derivee2([1,2],2),-1)
 
 if __name__ == '__main__':
     unittest.main()
