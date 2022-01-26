@@ -8,4 +8,12 @@ def miroir(str,index):
     return(str1 + str2)
 
 
-
+def derivee(listA,t):
+    lenth = len(listA)
+    if (lenth <=1):
+        return -1
+    else:
+        listB = []
+        for i in range(lenth-1):
+            listB.append(round((listA[i+1]-listA[i])/t,2))
+        return listB
