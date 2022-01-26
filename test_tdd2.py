@@ -10,6 +10,11 @@ class Test(unittest.TestCase):
         self.assertEqual(tdd2.miroir('pog',0),'pp')
 
  
+    def test_derivee(self):
+        self.assertEqual(tdd2.derivee([-2.979,-1.056,0.76,2.298,4.987],2),[0.96,0.91,0.77,1.34])
+        self.assertEqual(tdd2.derivee([5.029,2.498,1.409,1.409,2.409,5.209],0.5),[-5.06,-2.18,0.0,2.0,5.6])
+        self.assertEqual(tdd2.derivee([2.575,2.575,2.575,2.575],1),[0,0,0])
+        self.assertEqual(tdd2.derivee([1],2),-1)
 
 if __name__ == '__main__':
     unittest.main()
